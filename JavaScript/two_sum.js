@@ -1,4 +1,5 @@
 /**
+ * 1.两数之和	
  * @param {number[]} nums
  * @param {number} target
  * @return {number[]}
@@ -11,4 +12,9 @@ var twoSum = function(nums, target) {
         hash[nums[i]]=i;
     }
 }
+
+/**
+*	Hashmap
+*	object['']
+*/
 

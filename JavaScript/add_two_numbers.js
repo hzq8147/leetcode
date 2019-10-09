@@ -1,5 +1,6 @@
 
 /**
+ * 2.两数相加
  * Definition for singly-linked list.
  * function ListNode(val) {
  *     this.val = val;
@@ -87,3 +88,9 @@ var addTwoNumbers = function(l1, l2) {
     }
     return root.next;
 };
+
+/**
+*    直接.next 为null则默认为0
+*    链表使用
+*    对象传参为地址    
+*/
