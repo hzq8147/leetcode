@@ -2,6 +2,10 @@
  * @param {number[][]} triangle
  * @return {number}
  */
+
+ /**
+ *自上而下
+ */
 var minimumTotal = function(triangle) {
   let result=[[]];
   result[0][0]=triangle[0][0];
@@ -37,3 +41,21 @@ var minimumTotal = function(triangle) {
  *	状态
  */
 
+ /**
+ * 自下而上简洁很多O(n)
+ */
+
+var  minimumTotal=function(triangle){
+	for (let i=triangle.length - 2 ;i >= 0 ;i--){
+		for (let j=0;j<=i;j++){
+			triangle[i][j]=triangle[i+1][j]+triangle[i][j] >triangle[i+1][j+1] + triangle[i][j] ? triangle[i+1][j+1] + triangle[i][j] : triangle[i+1][j]+triangle[i][j];
+		}
+	}
+	return triangle[0][0];
+}
+minimunTotal([
+     [2],
+    [3,4],
+   [6,5,7],
+  [4,1,8,3]
+]);
