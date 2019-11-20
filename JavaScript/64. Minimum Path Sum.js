@@ -20,7 +20,6 @@ var minPathSum = function(grid) {
   			}
   	}
   }
-  console.log(grid[grid.length-1][grid[grid.length-1].length - 1]);
   return grid[grid.length-1][grid[grid.length-1].length - 1];
 };
 minPathSum([
