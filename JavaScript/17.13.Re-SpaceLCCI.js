@@ -31,4 +31,6 @@ respace(["looked","just","like","her","brother"],"jesslookedjustliketimherbrothe
  * 第 i + 1 个字符未匹配，则 dp[i + 1] = dp[i] + 1，即不匹配数加 1;
  * 遍历前 i 个字符，若以其中某一个下标 idx 为开头、以第 i + 1 个字符为结尾的字符串正好在词典里，则 dp[i] = min(dp[i], dp[idx]) 更新 dp[i]。
  *
+ *
+ * 理解起来本质还是迈台阶 只不过有的台阶能迈有的台阶不能迈
  */
