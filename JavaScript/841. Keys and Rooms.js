@@ -19,10 +19,7 @@ var canVisitAllRooms = function(rooms) {
             result ++;
         }
     })
-    if (result == rooms.length){
-        return true;
-    }
-    return false;
+    return result === rooms.length;
 };
 
 /**

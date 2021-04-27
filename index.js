@@ -1,18 +1,21 @@
 /**
+ * @param {number} m
  * @param {number} n
  * @return {number}
  */
-var climbStairs = function(n) {
-  let a=[];
-  a[1]=1;
-  a[2]=2;
-  for (let i=3;i<=n;i++)  {
-  	a[i]=a[i-1] + a[i-2];
+var uniquePaths = function(m, n) {
+  let a = [];
+  for (let i = 0 ;i < m;i++){
+    a[i] = [];
+    for (let j = 0 ;j < n ;j++){
+      a[i][j] = (i === 0 || j === 0) ? 1 : a[i][j] = a[i-1][j] + a[i][j-1];
+    }
   }
-  return a[n];
+  return a[m-1][n-1];
 };
 
 /**
- *	动态规划 
- * 斐波那契数列
+ *	动态规划
+ *  填数游戏
+ *  二维上台阶
  */
